@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from "next/image";
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
 import dbConnect from '@/lib/dbConnect';
 export default async function Services() {
     const servicesCollection=await dbConnect("services");
@@ -35,7 +36,7 @@ export default async function Services() {
                   href={`/services/${item._id}`}
                   className="text-orange-500"
                 >
-      
+           <FaArrowRight></FaArrowRight>
                 </Link>
               </div>
             </div>
