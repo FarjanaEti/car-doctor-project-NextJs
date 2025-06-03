@@ -4,6 +4,7 @@ import { signIn } from "next-auth/react";
 
 import { FaFacebookF, FaLinkedinIn, FaGoogle } from "react-icons/fa";
 import Link from "next/link";
+import SocialLogin from "./socialLogin";
 //import { useRouter } from "next/navigation";
 
 export default function LoginForm() {
@@ -50,17 +51,7 @@ export default function LoginForm() {
         Sign In
       </button>
       <p className="text-center">Or Sign In with</p>
-      <div className="flex justify-center gap-8">
-        <p className="bg-slate-200 rounded-full p-3">
-          <FaFacebookF />
-        </p>
-        <p className="bg-slate-200 rounded-full p-3">
-          <FaLinkedinIn />
-        </p>
-        <p className="bg-slate-200 rounded-full p-3">
-          <FaGoogle />
-        </p>
-      </div>
+      <SocialLogin></SocialLogin>
       <p className="text-center">
         Already have an account?{" "}
         <Link href="/register" className="text-orange-500 font-bold">
